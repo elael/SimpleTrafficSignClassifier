@@ -58,8 +58,9 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed, clearly not very well balanced.
 
-![alt text][test_data.]
-![alt text][train_data.]
+![alt text][train_data]
+
+![alt text][test_data]
 
 ### Design and Test a Model Architecture
 
@@ -77,9 +78,9 @@ I decided to have a first try with the network befor applying any other pre-proc
 
 My final model consisted of the following layers:
 
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 normalized LAB image   				| 
+| Layer         		|     Description	        					|
+|:---------------------:|:---------------------------------------------:|
+| Input         		| 32x32x3 normalized LAB image   				|
 | Convolution 5x5     	| 1x1 stride, same padding, outputs 28x28x6 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6  				|
@@ -94,8 +95,6 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Dropout				|												|
 | Fully connected		| outputs 10  									|
-| Softmax				|           									|
- 
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
@@ -144,19 +143,19 @@ The model was able to correctly guess 10 of the 11 traffic signs, which gives an
 The code for making predictions on my final model is located in the 87th cell of the Ipython notebook.
 Results for the top three predictions are:
 
-| Image         		|     1st	     |   		2nd | 3rd			| 
-|:---------------------:|:--------------------:|:------------:|:-------------:| 
-|![alt text][not2] | No vehicles 100.0% | Bumpy road 0.0% | Speed limit (50km/h) 0.0%|
-|![alt text][trafficlight] | Traffic signals 100.0% | General caution 0.0% | Go straight or left 0.0%|
-|![alt text][small80k] | Speed limit (80km/h) 99.5% | Speed limit (50km/h) 0.5% | Speed limit (30km/h) 0.0%|
-|![alt text][priority] | Yield 100.0% | Speed limit (20km/h) 0.0% | Speed limit (30km/h) 0.0%|
-|![alt text][stop] | Stop 100.0% | Speed limit (30km/h) 0.0% | Speed limit (80km/h) 0.0%|
-|![alt text][turnright] | Go straight or right 100.0% | End of all speed and passing limits 0.0% | Ahead only 0.0%|
-|![alt text][small30k] | Speed limit (30km/h) 100.0% | End of speed limit (80km/h) 0.0% | Speed limit (80km/h) 0.0%|
-|![alt text][not] | No entry 100.0% | Speed limit (20km/h) 0.0% | Speed limit (30km/h) 0.0%|
-|![alt text][turnleft] | Go straight or left 100.0% | Ahead only 0.0% | No passing for vehicles over 3.5 metric tons 0.0%|
-|![alt text][small60k] | Speed limit (60km/h) 100.0% | Children crossing 0.0% | Speed limit (80km/h) 0.0%|
-|![alt text][small100k] | Speed limit (100km/h) 99.9% | Speed limit (80km/h) 0.1% | Speed limit (30km/h) 0.0%|
+| Image         		|     1st	     |   		2nd | 3rd	| 4th | 5th		| 
+|:---------------------:|:--------------------:|:------------:|:-----------:|:-----------:|:-------------:| 
+|![alt text][priority] | Yield 100.0% | Speed limit (20km/h) 0.0% | Speed limit (30km/h) 0.0% | Speed limit (50km/h) 0.0% | Speed limit (60km/h) 0.0%|
+|![alt text][stop] | Stop 100.0% | Speed limit (30km/h) 0.0% | Speed limit (80km/h) 0.0% | Yield 0.0% | Bicycles crossing 0.0%|
+|![alt text][trafficlight] | Traffic signals 100.0% | General caution 0.0% | Go straight or left 0.0% | No vehicles 0.0% | Turn right ahead 0.0%|
+|![alt text][not2] | No vehicles 100.0% | Bumpy road 0.0% | Speed limit (50km/h) 0.0% | Speed limit (70km/h) 0.0% | No entry 0.0%|
+|![alt text][turnright] | Go straight or right 100.0% | End of all speed and passing limits 0.0% | Ahead only 0.0% | Children crossing 0.0% | Roundabout mandatory 0.0%|
+|![alt text][small30k] | Speed limit (30km/h) 100.0% | End of speed limit (80km/h) 0.0% | Speed limit (80km/h) 0.0% | Speed limit (70km/h) 0.0% | Speed limit (20km/h) 0.0%|
+|![alt text][not] | No entry 100.0% | Speed limit (20km/h) 0.0% | Speed limit (30km/h) 0.0% | Speed limit (50km/h) 0.0% | Speed limit (60km/h) 0.0%|
+|![alt text][turnleft] | Go straight or left 100.0% | Ahead only 0.0% | No passing for vehicles over 3.5 metric tons 0.0% | Priority road 0.0% | Speed limit (80km/h) 0.0%|
+|![alt text][small80k] | Speed limit (80km/h) 99.5% | Speed limit (50km/h) 0.5% | Speed limit (30km/h) 0.0% | End of speed limit (80km/h) 0.0% | Keep right 0.0%|
+|![alt text][small60k] | Speed limit (60km/h) 100.0% | Children crossing 0.0% | Speed limit (80km/h) 0.0% | Turn left ahead 0.0% | Ahead only 0.0%|
+|![alt text][small100k] | Speed limit (100km/h) 99.9% | Speed limit (80km/h) 0.1% | Speed limit (30km/h) 0.0% | Speed limit (120km/h) 0.0% | End of speed limit (80km/h) 0.0%|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
